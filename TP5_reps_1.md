@@ -41,4 +41,20 @@
 
 #### On constate que l'ajout de transactions via S_2 ont été "commit" même si nous avons quitté S_2 avec "quit;". _(attendu??)_
 
-## 4. 
+## 4. Dans la session S1, ins´erer quelque lignes et fermer brutalement sqlplus. Reconnecter `a nouveau sur votre compte. Les donn´ees saisies ont-elles ´et´e pr´eserv´ees ?
+
+### Je commecne par ajouter des données via la session S_1 : 
+
+<img width="537" height="241" alt="8" src="https://github.com/user-attachments/assets/1563aeea-04da-4c1b-88a3-226a94b08ba3" />
+
+### Puis je ferme brutalement le terminal utilisé pour cela :
+
+<img width="638" height="201" alt="9" src="https://github.com/user-attachments/assets/2a33891d-e45f-48d5-ab8d-bb353a2e1827" />
+
+### En rouvrant un terminal et me reconnectant, j'observe le contenu de la table : 
+
+<img width="684" height="422" alt="10" src="https://github.com/user-attachments/assets/e9e1a25f-78df-4d87-8855-cc79c789d1e7" />
+
+#### On constate que les deux lignes exécutées précédemment n'ont pas été prises en compte à cause de la fermeture brutale.
+
+## 5.
