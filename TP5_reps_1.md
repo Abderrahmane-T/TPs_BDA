@@ -57,4 +57,17 @@
 
 #### On constate que les deux lignes exécutées précédemment n'ont pas été prises en compte à cause de la fermeture brutale.
 
-## 5.
+## 5. Dnas une nouvelle session, ins´erer quelques lignes et modifier la structure de la table transaction, en y ajoutant par exemple l’attribut val2transaction de type NUMBER(10). Ex´ecuter la commande ROLLBACK. Que s’est-il pass´e ?
+
+### Ajout de données via la session S_3 et modification de la structure de la table transaction
+
+<img width="557" height="273" alt="11" src="https://github.com/user-attachments/assets/e84d6aef-9043-4a97-8ea7-7416514f486d" />
+
+### Exécution de "ROLLBACK;" et vérifications :
+
+<img width="740" height="458" alt="12" src="https://github.com/user-attachments/assets/7f28e674-4481-491a-8849-68d9d2431961" />
+
+#### On constate qu'aucune des modifications réalisées précédemment n'a été annulé par le ROLLBACK.
+
+
+## 6. Conclure : d´efinir de mani`ere pr´ecise qu’est-ce qu’une session, une transaction et comment valider une transaction ou l’annuler.
