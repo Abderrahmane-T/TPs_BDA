@@ -9,6 +9,8 @@
 
 <img width="330" height="182" alt="1" src="https://github.com/user-attachments/assets/c45af89b-bd61-48cb-8848-ed620fd83c77" />
 
+***
+
 ## 2. En utilisant la session S2, ins´erer quelques lignes, modifier une ligne, en supprimer une autre et enfin annuler les mises `a jour venant d’ˆetre effectu´ees avec la commande ROLLBAK. Afficher le contenu de la table.
 
 ### Ajout de trois transactions, 'transac1', 'transac2' et 'transac3' : 
@@ -29,6 +31,8 @@
 
 #### Avant le rollback, les données ajoutées et modifiées sont conservées mais après le rollback, aucune d'entre elle ne figure : tout a été annulé.
 
+***
+
 ## 3. Ins´erer `a nouveau dans transaction quelques lignes et clore avec la commande quit;. Consulter le contenu de la table, en utilisant la session S1. Que s’est-il pass´e ?
 
 ### Ajout de deux transactions via S_2 ('transac31' et 'transac32') avant de quitter avec "quit;":
@@ -40,6 +44,8 @@
 <img width="549" height="179" alt="7" src="https://github.com/user-attachments/assets/936e77ca-6988-4d41-8c16-842a009ca9d2" />
 
 #### On constate que l'ajout de transactions via S_2 ont été "commit" même si nous avons quitté S_2 avec "quit;". _(attendu??)_
+
+***
 
 ## 4. Dans la session S1, ins´erer quelque lignes et fermer brutalement sqlplus. Reconnecter `a nouveau sur votre compte. Les donn´ees saisies ont-elles ´et´e pr´eserv´ees ?
 
@@ -57,6 +63,8 @@
 
 #### On constate que les deux lignes exécutées précédemment n'ont pas été prises en compte à cause de la fermeture brutale.
 
+***
+
 ## 5. Dnas une nouvelle session, ins´erer quelques lignes et modifier la structure de la table transaction, en y ajoutant par exemple l’attribut val2transaction de type NUMBER(10). Ex´ecuter la commande ROLLBACK. Que s’est-il pass´e ?
 
 ### Ajout de données via la session S_3 et modification de la structure de la table transaction
@@ -69,5 +77,6 @@
 
 #### On constate qu'aucune des modifications réalisées précédemment n'a été annulé par le ROLLBACK.
 
+***
 
 ## 6. Conclure : d´efinir de mani`ere pr´ecise qu’est-ce qu’une session, une transaction et comment valider une transaction ou l’annuler.
