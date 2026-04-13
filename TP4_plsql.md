@@ -125,3 +125,38 @@ Puis, je crée la procédure anonyme qui va permettre de calculer "5!" en parcou
 Enfin, j'ajoute le couple formé par 5 et le résultat de 5! à la table.
 
 _Encore une fois, il n'a pas été possible de faire le code avec a=&a (si cela aurait été possible, l'exécution de ce code avec l'usage de ce qui y a été mis en commentaire aurait été ma première réponse)_
+
+---
+
+### 5. Modifier le programme précédent pour qu’il calcule et stocke dans une table re-sultatsFactoriels les factorielles des 20 premiers nombres entiers.
+
+```sql
+
+-- SET SERVEROUTPUT ON
+
+DECLARE 
+
+    k NUMBER := 1;
+BEGIN
+    
+    FOR i IN 1..20 LOOP
+
+        k:=k *i;
+        INSERT INTO resultatFactoriel VALUES (i, k);
+    END LOOP;
+
+    
+    COMMIT;
+END;
+/
+
+```
+
+Je reprends donc le code de la question précédente et y retire l'utilisation de la variable n pour la remplacer par une boucle de i qui va de 1 à 20, calculant, au fur et à mesure, les i!.
+
+On peut ensuite afficher les résultats grâce à la requête SQL suivante (où la table resultatFactoriel a déjà été créée à la question précédente) : 
+
+```sql
+SELECT * FROM resultatFactoriel
+```
+
