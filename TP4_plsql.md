@@ -74,6 +74,7 @@ END;
 Je commence donc par créer cette fonction dans la section 'SQL SCripts' avant de pouvoir appeler la fonction, dans la section 'SQL Commadnds', de la manière suivante : 
 
 ```sql
+    -- SET SERVEROUTPUT ON
 
 BEGIN
     DBMS_OUTPUT.ENABLE;
@@ -83,3 +84,44 @@ END;
 ```
 
 Ce qui nous donnera le résultat de 2³.
+
+---
+
+### 4. ´Ecrire une proc´edure anonyme PL/SQL qui calcule la factorielle d’un nombre strictement positif saisi par l’utilisateur. Le résultat sera stock´e dans une table resultatFactoriel.
+
+```sql
+
+CREATE TABLE resultatFactoriel (
+    nombre NUMBER,
+    factorielle NUMBER
+);
+```
+Je commence par créer une table resultatFactoriel comme demandé dans l'énoncé.
+
+```sql
+
+-- SET SERVEROUTPUT ON
+
+DECLARE
+    -- ACCEPT n NUMBER PROMPT 'Veuillez saisir la valeur pour laquelle vous souhaitez avoir la factorielle :'
+
+    n NUMBER := 5; 
+    k NUMBER := 1;
+BEGIN
+
+    FOR i IN 1..n LOOP
+        k:=k *i;
+    END LOOP;
+
+    INSERT INTO resultatFactoriel VALUES (n, k);
+    COMMIT;
+END;
+/
+
+```
+
+Puis, je crée la procédure anonyme qui va permettre de calculer "5!" en parcourant une boucle avec un indice qui va de 1 à 5 et qui, à chaque itération, change la valeur de k (valant 1 initialement).
+
+Enfin, j'ajoute le couple formé par 5 et le résultat de 5! à la table.
+
+_Encore une fois, il n'a pas été possible de faire le code avec a=&a (si cela aurait été possible, l'exécution de ce code avec l'usage de ce qui y a été mis en commentaire aurait été ma première réponse)_
